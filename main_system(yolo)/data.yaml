@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 4
+names: ['battery-etc-etc', 'green', 'handle', 'white']
+
+roboflow:
+  workspace: school-blwzo
+  project: smartfactorydetection
+  version: 12
+  license: MIT
+  url: https://universe.roboflow.com/school-blwzo/smartfactorydetection/dataset/12

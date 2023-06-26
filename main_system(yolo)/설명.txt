@@ -1,0 +1,9 @@
+main_system.py 실행
+
+Bluetooth와 카메라가 연결된다.
+
+연결이 완료되면 카메라에서 수집에 데이터를 모델에서 predict 후
+prediction 5개를 모아 5개 모두 같은 class가 나올 경우
+bluetooth의 serial 통신을 통해 아두이노로 데이터 전송 후
+n초 간 잠시 멈춤
+

@@ -1,0 +1,31 @@
+코랩 설치
+main_system(yolo) directory에서 !pip install -r requirements.txt로 
+라이브러리 설치
+
+
+데이터셋: ( 이미 넣어져있음 / 추가학습 시 사용 )
+train, valid, test, data.yaml 을 main_system(yolo)에 넣어주면 됨
+데이터셋 다운 주소
+https://app.roboflow.com/school-blwzo/smartfactorydetection/12
+
+
+
+-- main_system(yolo) 경로에서 cmd에  아래 코드 입력
+train 코드
+python train.py --img 640 --batch 100 --epochs 10000 --data ./data.yaml --cfg ./models/yolov5s.yaml --weights yolov5s.pt --name yolov5_smartfactory2
+
+- 학습된 pt 파일은 runs/train/yolov5_smartfactory2/weight/best.pt
+
+
+detect 코드
+python detect.py --weights ./runs/train/yolov5_smartfactory23/weights/best.pt --img 640 --conf 0.7 --source ./mydataset/data3.mp4 
+
+source만 바꿔서 detect
+만약 학습한 모델이 변경될 경우
+--weights 부분의 경로 변경
+
+
+코드 실행
+main_system.py 실행( 카메라 포트 선택 / cv2.VideoCapture(수정) 수정에 포트 입력 ) 
+
+
