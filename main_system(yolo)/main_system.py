@@ -25,7 +25,7 @@ model = attempt_load(weights_path, device=device)
 model.eval()
 
 # 웹캠으로부터 영상을 받아오는 객체를 생성합니다.
-cap = cv2.VideoCapture(3)
+cap = cv2.VideoCapture(1)
 
 while True:
     # 웹캠으로부터 영상 프레임을 가져옵니다.

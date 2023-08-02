@@ -1,7 +1,7 @@
 import cv2 as cv
 import datetime
 
-cap = cv.VideoCapture()
+cap = cv.VideoCapture(1)
 
 while True:
     ret, img= cap.read()
